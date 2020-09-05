@@ -13,6 +13,10 @@ let package = Package(
         .library(
             name: "FlurrySPM",
             targets: ["Flurry"]
+        ),
+        .library(
+            name: "FlurryMessagingSPM",
+            targets: ["FlurryMessagingSPM"]
         )
     ],
     dependencies: [
@@ -24,7 +28,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "Flurry",
-            dependencies: ["FlurryMessaging", "FlurryConfig", "FlurryAnalytics", "FlurryAds"]
+            dependencies: ["FlurryConfig", "FlurryAnalytics", "FlurryAds"]
+        ),
+        .target(
+            name: "FlurryMessagingSPM",
+            dependencies: ["FlurryMessaging"]
         ),
         .binaryTarget(
             name: "FlurryMessaging",
@@ -44,8 +52,8 @@ let package = Package(
         ),
         
         .testTarget(
-            name: "FlurrySPM",
-            dependencies: ["Flurry"]
+            name: "FlurrySPM", "FlurryMessagingSPM"
+            dependencies: ["Flurry", "FlurryMessagingSPM]
         ),
     ]
 )
