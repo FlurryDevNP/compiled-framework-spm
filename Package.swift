@@ -52,8 +52,12 @@ let package = Package(
         ),
         
         .testTarget(
-            name: "FlurrySPM", "FlurryMessagingSPM"
-            dependencies: ["Flurry", "FlurryMessagingSPM]
+            name: "FlurrySPM",
+            dependencies: ["Flurry"]
         ),
+        .testTarget(
+            name: "FlurryMessagingSPMTest",
+            dependencies: ["FlurryMessagingSPM"]
+        )
     ]
 )
