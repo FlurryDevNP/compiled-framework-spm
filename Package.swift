@@ -84,7 +84,8 @@ let package = Package(
             dependencies: ["FlurryAds"]
         )
     ]
-),
+)
+
 let package = Package(
     name: "FlurryMessaging",
     platforms: [
@@ -96,7 +97,7 @@ let package = Package(
             name: "FlurryMessagingSPM",
             targets: ["FlurryMessaging"]
         ),
-    ]
+    ],
     dependencies: [
             // Dependencies declare other packages that this package depends on.
             // .package(url: /* package url */, from: "1.0.0"),
