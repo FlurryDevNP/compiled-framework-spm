@@ -86,7 +86,7 @@ let package = Package(
     ]
 )
 
-let package = Package(
+let packageMessaging = Package(
     name: "FlurryMessaging",
     platforms: [
         .iOS("14")
