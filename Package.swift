@@ -38,10 +38,6 @@ let package = Package(
             name: "FlurryAnalytics",
             dependencies: ["FlurryAnalytics"]
         ),
-//        .target(
-//            name: "FlurryMessaging",
-//            dependencies: ["FlurryMessaging"]
-//        ),
         .target(
             name: "FlurryConfig",
             dependencies: ["FlurryConfig"]
@@ -50,17 +46,13 @@ let package = Package(
             name: "FlurryAds",
             dependencies: ["FlurryAds"]
         ),
-//        .binaryTarget(
-//            name: "FlurryMessaging",
-//            path: "artifacts/FlurryMessaging.xcframework"
-//        ),
-        .binaryTarget(
-            name: "FlurryConfig",
-            path: "artifacts/FlurryConfig.xcframework"
-        ),
         .binaryTarget(
             name: "FlurryAnalytics",
             path: "artifacts/Flurry.xcframework"
+        ),
+        .binaryTarget(
+            name: "FlurryConfig",
+            path: "artifacts/FlurryConfig.xcframework"
         ),
         .binaryTarget(
             name: "FlurryAds",
@@ -71,10 +63,6 @@ let package = Package(
             name: "FlurryAnalyticsSPM",
             dependencies: ["FlurryAnalytics"]
         ),
-//        .testTarget(
-//            name: "FlurryMessagingSPM",
-//            dependencies: ["FlurryMessaging"]
-//        ),
         .testTarget(
             name: "FlurryConfigSPM",
             dependencies: ["FlurryConfig"]
@@ -106,7 +94,7 @@ let packageMessaging = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "FlurryMessaging",
+            name: "FlurryMessagingTarget",
             dependencies: ["FlurryMessaging"]
         ),
         .binaryTarget(
