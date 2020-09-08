@@ -32,26 +32,26 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "FlurryAnalytics",
-            dependencies: ["FlurryAnalytics"]
+            dependencies: ["FlurryAnalyticsBinary"]
         ),
         .target(
             name: "FlurryConfig",
-            dependencies: ["FlurryConfig"]
+            dependencies: ["FlurryConfigBinary"]
         ),
         .target(
             name: "FlurryAds",
-            dependencies: ["FlurryAds"]
+            dependencies: ["FlurryAdsBinary"]
         ),
         .binaryTarget(
-            name: "FlurryAnalytics",
+            name: "FlurryAnalyticsBinary",
             path: "artifacts/Flurry.xcframework"
         ),
         .binaryTarget(
-            name: "FlurryConfig",
+            name: "FlurryConfigBinary",
             path: "artifacts/FlurryConfig.xcframework"
         ),
         .binaryTarget(
-            name: "FlurryAds",
+            name: "FlurryAdsBinary",
             path: "artifacts/FlurryAds.xcframework"
         ),
         
