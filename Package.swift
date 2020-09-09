@@ -15,6 +15,10 @@ let package = Package(
             targets: ["FlurryAnalytics"]
         ),
         .library(
+            name: "FlurryMessagingSPM",
+            targets: ["FlurryMessaging"]
+        ),
+        .library(
             name: "FlurryConfigSPM",
             targets: ["FlurryConfig"]
         ),
@@ -35,6 +39,10 @@ let package = Package(
             dependencies: ["FlurryAnalyticsBinary"]
         ),
         .target(
+            name: "FlurryMessaging",
+            dependencies: ["FlurryMessagingBinary"]
+        ),
+        .target(
             name: "FlurryConfig",
             dependencies: ["FlurryConfigBinary"]
         ),
@@ -45,6 +53,10 @@ let package = Package(
         .binaryTarget(
             name: "FlurryAnalyticsBinary",
             path: "artifacts/Flurry.xcframework"
+        ),
+        .binaryTarget(
+            name: "FlurryMessagingBinary",
+            path: "artifacts/FlurryMessaging.xcframework"
         ),
         .binaryTarget(
             name: "FlurryConfigBinary",
@@ -58,6 +70,10 @@ let package = Package(
         .testTarget(
             name: "FlurryAnalyticsSPM",
             dependencies: ["FlurryAnalytics"]
+        ),
+        .testTarget(
+            name: "FlurryMessagingSPM",
+            dependencies: ["FlurryMessaging"]
         ),
         .testTarget(
             name: "FlurryConfigSPM",
